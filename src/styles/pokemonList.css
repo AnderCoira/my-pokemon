@@ -1,0 +1,45 @@
+.container{
+    margin-top: 20px;
+}
+
+.pkmContainer {
+    /* Background color + square size */
+    background-color: #1f2d40;
+    border: 1px solid #304562;
+    border-radius: 10%;
+    width: 120px;
+    height: 120px;
+    padding: 7px 0px 0px 0px;
+
+    /* Grid alignment */
+    float:left;
+    position: relative;
+    margin:10px;
+}
+
+.pkmName {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin: 0px 0px 10px 0px;
+}
+
+.pkmId {
+    margin: 0px 0px 0px 10px;
+}
+
+.pkmImage {
+    display: block;
+    margin: auto;
+}
+
+.pkmContainer:hover {
+    border: 1px solid #ba68c8;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    
+}
+
+.searchPokemon {
+    margin: 0px 0px 10px 10px;
+    padding: 10px 0px 0px 0px;
+}
