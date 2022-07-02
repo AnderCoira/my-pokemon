@@ -1,12 +1,14 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect, Suspense } from 'react';
 import { useParams } from "react-router-dom";
 import '../styles/pokemonDetail.css';
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei';
+import Bulbasaur from '../assets/3Dmodels/bulbasaur/Bulbasaur.js'
 
 export function PokemonDetail() {
 
     const { id } = useParams();
     const [pokemonDetail, setPokemonDetail] = useState();
-
 
     //API call to get all the pokemons
     const getPokemon = (pokemonID) => {
@@ -27,7 +29,10 @@ export function PokemonDetail() {
     return (
         <Fragment>
             <div className='container'>
-                CURRENTLY DEVELOPING DETAIL
+               <Canvas className="canvas">
+               <OrbitControls enableZoom={false} /> 
+                    <Bulbasaur />
+               </Canvas>
             </div>
         </Fragment>
     );

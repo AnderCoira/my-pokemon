@@ -1,0 +1,6 @@
+Descargar modelo 3D -> https://sketchfab.com/feed
+descargar gltf-pipeline -> npm install -g gltf-pipeline
+Convertir el gltf a gltf 2.0 -> gltf-pipeline -i scene.gltf -o bulbasaur.gltf -d
+Convertir ese gltf 2.0 a archivos js -> npx gltfjsx bulbasaur.gltf
+La conversion crea un componente -> Mover ese componente a tu carpeta de componentes
+Disfruta de tu modelo 3D
