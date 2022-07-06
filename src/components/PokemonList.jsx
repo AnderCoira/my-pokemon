@@ -9,6 +9,10 @@ export function PokemonList() {
     const [pokemons, setPokemons] = useState([]);
     const [filteredPokemons, setFilteredPokemons] = useState([]);
 
+    useEffect(() => {
+        getPokemons();
+    }, []);
+
     //API call to get all the pokemons
     const getPokemons = () => {
         fetch("https://pokeapi.co/api/v2/pokemon?limit=2000", {
@@ -84,10 +88,6 @@ export function PokemonList() {
         navigate(`/detail/${myUrl[myUrl.length - 2]}`);
         
     }
-
-    useEffect(() => {
-        getPokemons();
-    }, []);
 
     return (
         <Fragment>
